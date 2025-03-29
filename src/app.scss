@@ -1,0 +1,25 @@
+.app{
+    height: 100vh;
+
+    .sections{
+        width: 100%;
+        height:calc( 100vh - 70px ) ;
+        background-color:purple;
+        position: relative;
+        top: 70px;
+        scroll-behavior:smooth;
+        scroll-snap-type: y mandatory;
+        overflow: -moz-scrollbars-none; /* Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+        &::-webkit-scrollbar{
+            display: none; /* Chrome, Safari and Opera */
+            width: 0;
+            height: 0;
+        }
+        >*{
+            width: 100vw;
+            height:calc( 100vh - 70px ) ;
+            scroll-snap-align: start; /* Added to align sections */
+        }
+    }
+}
